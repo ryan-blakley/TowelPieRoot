@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Towel Pie Root</string>
+    <string name="reboot">Full Reboot</string>
+    <string name="uninstall">Uninstall</string>
+    <string name="btnRoot">Make it ra1n on Moto</string>
+    <string name="strChkBoot">Root on Reboot</string>
+    <string name="strMsg">Thanks for using Towel Pie Root\nBy KrYpToNiTe!\n\n All the credit for the exploits go to Geohot and JCase not me, I only take credit for the app!\n\n 
+    Without them this app would not be possible. It combines Towelroot\'s futex exploit with a modified version of PIE root\'s xbin.img mount into one app. To achieve a 
+    one click untethered root for write protected devices!\n\n If you enjoyed this, please donate to Geohot at towelroot.com, 
+    and JCase at jcase@cunninglogic.com!</string>
+    <string name="lblStatus"></string>
+    
+</resources>

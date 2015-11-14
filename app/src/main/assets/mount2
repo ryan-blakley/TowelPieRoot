@@ -1,0 +1,25 @@
+#!/system/bin/sh
+#TowelPieRoot's mount script
+#based on jcase's Pie Root, thanks jcase for Pie Root
+#By KrYpToNiTe
+
+#Kill TowelRoot's su daemon, so it can be relaunched under the u:r:kernel:s0 context
+/data/busybox killall daemonsu
+
+#Mount /system rw
+/data/busybox mount -o remount,rw /dev/block/platform/msm_sdcc.1/by-name/system /system
+
+#Mount the bin.img over /system/bin
+/data/busybox mount /data/bin.img /system/bin
+
+#Mount the xbin.img over /system/xbin
+/data/busybox mount /data/xbin.img /system/xbin
+
+#Remount /system ro
+/data/busybox mount -o remount,ro /dev/block/platform/msm_sdcc.1/by-name/system /system
+
+#Echo 2 to uevent_helper to show this script ran
+/data/busybox echo 2 > /sys/kernel/uevent_helper
+
+#Re-Launch the su daemon
+/system/xbin/daemonsu --auto-daemon &
